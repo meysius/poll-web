@@ -1,0 +1,31 @@
+<div class='container'>
+	<h3>Create New Poll</h3>
+	<form class="form-horizontal">
+		<div class="form-group">
+			<label for="" class="col-sm-2 control-label">Question</label>
+			<div class="col-sm-6">
+				<input type="text" class="form-control" id="question" ng-model='poll.question' placeholder="Ask whatever you want.">
+			</div>
+		</div>
+		<div ng-repeat='option in poll.options track by $index'>
+			<div class="form-group">
+				<label class="col-xs-12 col-sm-2 control-label" for="option{{$index + 1}}">Option {{$index + 1}}</label>
+				<div class="col-xs-10 col-sm-6">
+					<input type="text" class="form-control" id="option{{$index + 1}}" ng-model='poll.options[$index]' placeholder='option {{$index + 1}}'>
+				</div>
+				<div>
+					<button type="submit" class="btn btn-danger" ng-click='delete_option($index)'>
+						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button class="btn btn-default" ng-click='add_new_option()'>Add Option</button>
+				<button type="submit" class="btn btn-primary" ng-click='submit_poll_create()'>Create</button>
+			</div>
+		</div>
+	</form>
+	<br><br><br><br><br><br><br><br>
+</div>

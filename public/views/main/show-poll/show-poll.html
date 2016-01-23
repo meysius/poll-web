@@ -1,0 +1,17 @@
+<div class='container'>
+	<h3>Poll: {{poll.question}}</h3>
+	<div ng-repeat='option in poll.options'>
+		<div class="row">
+			<div class="col-sm-9 col-lg-7">
+				<div class="input-group form-group">
+					<span class="input-group-addon">
+						<input type="radio" ng-checked="option.id == poll.user_choice" ng-click="update_user_choice(option.id)">
+					</span>
+					<input type="text" class="form-control" aria-label="..." value="{{option.text}}" readonly>
+					<div class="input-group-addon">{{option.votes_count}}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br><br><br><br><br><br><br><br><br><br>
+</div>

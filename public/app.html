@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app='pollApp'>
+<head>
+	<title></title>
+	<base href='/'>
+	<meta http-equiv='X-UA-Compatible' content='IE=Edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel='stylesheet' href='lib/bootstrap/dist/css/bootstrap.min.css'/>
+	<link rel='stylesheet' href='css/app.css'/>
+</head>
+<body>
+	<div ui-view></div>
+
+	<script src='lib/jquery/dist/jquery.min.js'></script>
+	<script src='lib/bootstrap/dist/js/bootstrap.min.js'></script>
+	<script src='lib/angular/angular.min.js'></script>
+	<script src='lib/angular-ui-router/release/angular-ui-router.min.js'></script>
+	<script src='lib/angular-resource/angular-resource.min.js'></script>
+	<script src='lib/angular-jwt/dist/angular-jwt.min.js'></script>
+	<script src='lib/a0-angular-storage/dist/angular-storage.min.js'></script>
+	
+	<script src='app.module.js'></script>
+	<script src='app.routes.js'></script>
+
+	<script src='services/User.js'></script>
+	<script src='services/Session.js'></script>
+	<script src='services/Poll.js'></script>
+	<script src='services/Vote.js'></script>
+	
+	<script src='directives/navbar/navbar.js'></script>
+	<script src='directives/footer/footer.js'></script>
+	<script src='directives/authentication/authentication.js'></script>
+
+	<script src='views/main/main.js'></script>
+	<script src='views/main/authentication/authentication.js'></script>
+	<script src='views/main/polls/polls.js'></script>
+	<script src='views/main/new-poll/new-poll.js'></script>
+	<script src='views/main/show-poll/show-poll.js'></script>
+</body>
+</html>
+

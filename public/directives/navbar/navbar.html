@@ -1,0 +1,23 @@
+<div class='navbar navbar-default navbar-fixed-top'>
+	<div class='container'>
+		<div class='navbar-header'>
+			<button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#navbar' aria-expanded='false' aria-controls='navbar'>
+				<span class='sr-only'>Toggle navigation</span>
+				<span class='icon-bar'></span>
+				<span class='icon-bar'></span>
+				<span class='icon-bar'></span>
+			</button>
+			<a class='navbar-brand' ui-sref='main.polls'>Ask Everybody</a>
+		</div>
+		<div id='navbar' class='navbar-collapse collapse' aria-expanded='false' style='height: 1px;'>
+			<ul class='nav navbar-nav navbar-right' ng-if='!$root.logged_in'>
+				<li><a ui-sref='main.login'>Login</a></li>
+				<li><a ui-sref='main.signup'>Sign up</a></li>
+			</ul>
+			<ul class='nav navbar-nav navbar-right' ng-if='$root.logged_in'>
+				<li><p class="navbar-text">{{$root.email}}</p></li>
+				<li><a href="#" ng-click="logout()">Log out</a></li>
+			</ul>
+		</div>
+	</div>
+</div>

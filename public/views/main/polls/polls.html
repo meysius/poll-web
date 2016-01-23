@@ -1,0 +1,22 @@
+<div class='container'>
+	<h3>The list of all polls</h3>
+	<p><button type='button' class='btn btn-primary' ui-sref='main.new_poll'>Create Poll</button></p>
+	<div ng-if='polls.length == 0' class='alert alert-info' role='alert'>
+		Nobody has created any polls yet.
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">Created before</h3>
+		</div>
+		<div class="panel-body">
+			<div ng-repeat='poll in polls'>
+				<div class='row'>
+					<div class='col-xs-12 centered'>
+						<p><a href='#' ng-click='open_poll(poll.id)'>{{poll.question}}</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br><br><br><br><br><br><br><br><br><br>
+</div>
