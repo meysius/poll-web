@@ -15,7 +15,7 @@
 				<li><a ui-sref='main.signup'>Sign up</a></li>
 			</ul>
 			<ul class='nav navbar-nav navbar-right' ng-if='$root.logged_in'>
-				<li><p class="navbar-text">{{$root.email}}</p></li>
+				<li><p testid="user_email_after_login" class="navbar-text">{{$root.email}}</p></li>
 				<li><a href="#" ng-click="logout()">Log out</a></li>
 			</ul>
 		</div>

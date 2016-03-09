@@ -1,10 +1,10 @@
 <div class='container'>
 	<h3>The list of all polls</h3>
-	<p><button type='button' class='btn btn-primary' ui-sref='main.new_poll'>Create Poll</button></p>
+	<p><button id="create-poll-btn" type='button' class='btn btn-primary' ui-sref='main.new_poll'>Create Poll</button></p>
 	<div ng-if='polls.length == 0' class='alert alert-info' role='alert'>
 		Nobody has created any polls yet.
 	</div>
-	<div class="panel panel-default">
+	<div ng-if='polls.length > 0' id="created-polls-panel" class="panel panel-default">
 		<div class="panel-heading">
 			<h3 class="panel-title">Created before</h3>
 		</div>
