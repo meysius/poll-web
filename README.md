@@ -272,9 +272,10 @@ Whenever you request for a new route, one single path from the root to one of th
 To create a controller, make a new js file write the following code:
 
 ```javascript
-angular.module('moduleName').controller('ControllerName', 	function($scope, ...Necessary Entities...) {
-        ...
-});
+angular.module('moduleName')
+	.controller('ControllerName', function($scope) {
+    		// code here    
+	});
 ```
 
 Add a link to this file in your angular home.
