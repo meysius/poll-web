@@ -113,7 +113,7 @@ Put the following code into ```app.html```:
 
 ```html
 <!DOCTYPE html>
-<html ng-app='yourAppName'>
+<html ng-app='moduleName'>
 <head>
 	<title></title>
 	<base href='/'>
@@ -245,7 +245,7 @@ Follow instructions [here](https://github.com/angular-ui/ui-router) to install `
 You can specify a state like the following:
 
 ```javascript
-angular.module(‘moduleName’)
+angular.module('moduleName')
 	.config(function($locationProvider, $stateProvider,$urlRouterProvider) {
 		$locationProvider.html5Mode(true);
 		$urlRouterProvider.otherwise('/');
