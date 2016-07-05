@@ -45,6 +45,14 @@ var app = angular.module('yourAppName', ['ui.router']);
 ```
 
 ### 2. Creating Your Angular App
+Create a project directory, navigate to it and install ```express```, ```angular```, and ```bootstrap```:
+
+```sh
+$ npm install express
+$ bower install angular
+$ bower install bootstrap
+```
+
 Manually create a directory structure like the following:
 
 ```
@@ -83,13 +91,6 @@ my_project/
 --------app.html
 ```
 
-Navigate to the project folder and install ```express```, ```angular```, and ```bootstrap```:
-
-```sh
-$ npm install express
-$ bower install angular
-$ bower install bootstrap
-```
 
 Put the following code into ```server.js```:
 
